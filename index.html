@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>log in </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        
+body {
+    background: url(./img/cta-back-2.jpg ) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.container .login
+{
+    background: rgb(157, 155, 155);
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    margin: 250px auto;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+input#username 
+{
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+input#password 
+{
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button 
+{
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 5px !important;
+    border: none;
+    background: rgb(0, 132, 255);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 500;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <div class="login">
+        <input type="text" placeholder="Enter your username" id="username"> <br> <br>
+        <input type="text" placeholder="Enter your password" id="password"> <br> <br>
+        <button onclick="loginsystem()">Login</button>
+    </div>
+    </div>
+
+<script>
+    function loginsystem(){
+        var username= document.getElementById("username").value;
+        var password= document.getElementById("password").value;
+
+        var regUsername = 'mdrumanmehed';
+        var regPass= "Rum@n5481";
+
+        if(username == regUsername && password == regPass)
+        {
+            location.replace ("https://www.facebook.com/mdrumanmehedi");
+        }
+        else if(username != regUsername && password != regPass)
+        {
+            document.write("username  & password bothe are incorrect");
+        }
+        else if (username != regUsername && password ==regPass)
+        {
+            document.write("username is incorrect");
+        }
+        else if (username == regUsername && password !=regPass)
+        {
+            document.write("password is incorrect");
+        }
+    }
+</script>
+  </body>
+</html>
